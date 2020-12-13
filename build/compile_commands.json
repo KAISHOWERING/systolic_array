@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/src/main.cpp.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/src/main.cpp",
+  "file": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/src/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop.cpp.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop.cpp",
+  "file": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Slow.cpp.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Slow.cpp",
+  "file": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Slow.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Trace.cpp.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Trace.cpp",
+  "file": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Trace.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Syms.cpp.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Syms.cpp",
+  "file": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Syms.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Trace__Slow.cpp.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Trace__Slow.cpp",
+  "file": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir/Vtop__Trace__Slow.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/usr/local/share/verilator/include/verilated.cpp.o -c /usr/local/share/verilator/include/verilated.cpp",
+  "file": "/usr/local/share/verilator/include/verilated.cpp"
+},
+{
+  "directory": "/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build",
+  "command": "/bin/g++-9  -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -I/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd  -g   -o CMakeFiles/Vsystolic_array.dir/usr/local/share/verilator/include/verilated_fst_c.cpp.o -c /usr/local/share/verilator/include/verilated_fst_c.cpp",
+  "file": "/usr/local/share/verilator/include/verilated_fst_c.cpp"
+}
+]

@@ -1,0 +1,1 @@
+/usr/local/bin/verilator_bin;--compiler;gcc;--prefix;Vtop;--Mdir;/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/Vsystolic_array.dir/Vtop.dir;--make;cmake;--trace-fst;--cc;src/top.sv;src/o_buf.sv;src/pe_array.sv;src/PE.sv;src/read_buf.sv

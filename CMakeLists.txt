@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(systolic_array)
+find_package(verilator HINTS $ENV{VERILATOR_ROOT})
+add_executable(Vsystolic_array src/main.cpp)
+verilate(Vsystolic_array SOURCES src/top.sv src/o_buf.sv src/pe_array.sv src/PE.sv src/read_buf.sv TRACE_FST)

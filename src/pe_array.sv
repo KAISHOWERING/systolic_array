@@ -37,8 +37,8 @@ for(genvar i = 0; i < array_height; ++i) begin: pe_column
         .x_w(x_w)
         ,.depth(rbuf_depth)
     ) rbuf (
-        .clk_i(clk_in),
-        .rst_i(rst_in),
+        .clk_i(clk_i),
+        .rst_i(rst_i),
 
         .start_vi(start_v[i]),
         .d_o(pe_x[i]),
