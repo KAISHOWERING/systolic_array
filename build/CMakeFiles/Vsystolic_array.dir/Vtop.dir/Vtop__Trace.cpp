@@ -1291,8 +1291,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
                                                 >> 6U))) 
                                   & (IData)(vlTOPp->wr_vi))));
         tracep->chgCData(oldp+804,((7U & (IData)(vlTOPp->addr_i))),3);
-        tracep->chgBit(oldp+805,(((0U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+805,(((0U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+806,(((0U == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
@@ -1310,8 +1310,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
         tracep->chgBit(oldp+813,(((7U == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+814,(((1U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+814,(((1U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+815,(((8U == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
@@ -1329,8 +1329,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
         tracep->chgBit(oldp+822,(((0xfU == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+823,(((2U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+823,(((2U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+824,(((0x10U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
@@ -1356,8 +1356,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
         tracep->chgBit(oldp+831,(((0x17U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+832,(((3U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+832,(((3U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+833,(((0x18U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
@@ -1383,8 +1383,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
         tracep->chgBit(oldp+840,(((0x1fU == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+841,(((4U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+841,(((4U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+842,(((0x20U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
@@ -1410,8 +1410,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
         tracep->chgBit(oldp+849,(((0x27U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+850,(((5U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+850,(((5U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+851,(((0x28U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
@@ -1437,8 +1437,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
         tracep->chgBit(oldp+858,(((0x2fU == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+859,(((6U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+859,(((6U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+860,(((0x30U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
@@ -1464,8 +1464,8 @@ void Vtop::traceChgSub0(void* userp, VerilatedFst* tracep) {
         tracep->chgBit(oldp+867,(((0x37U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->chgBit(oldp+868,(((7U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                  >> 2U))) 
+        tracep->chgBit(oldp+868,(((7U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                >> 3U))) 
                                   & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->chgBit(oldp+869,(((0x38U == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 

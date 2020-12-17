@@ -2558,8 +2558,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
                                                  >> 6U))) 
                                    & (IData)(vlTOPp->wr_vi))));
         tracep->fullCData(oldp+805,((7U & (IData)(vlTOPp->addr_i))),3);
-        tracep->fullBit(oldp+806,(((0U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+806,(((0U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+807,(((0U == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
@@ -2577,8 +2577,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
         tracep->fullBit(oldp+814,(((7U == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+815,(((1U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+815,(((1U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+816,(((8U == (0x3fU & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
@@ -2602,8 +2602,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
         tracep->fullBit(oldp+823,(((0xfU == (0x3fU 
                                              & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+824,(((2U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+824,(((2U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+825,(((0x10U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
@@ -2629,8 +2629,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
         tracep->fullBit(oldp+832,(((0x17U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+833,(((3U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+833,(((3U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+834,(((0x18U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
@@ -2656,8 +2656,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
         tracep->fullBit(oldp+841,(((0x1fU == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+842,(((4U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+842,(((4U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+843,(((0x20U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
@@ -2683,8 +2683,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
         tracep->fullBit(oldp+850,(((0x27U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+851,(((5U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+851,(((5U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+852,(((0x28U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
@@ -2710,8 +2710,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
         tracep->fullBit(oldp+859,(((0x2fU == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+860,(((6U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+860,(((6U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+861,(((0x30U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
@@ -2737,8 +2737,8 @@ void Vtop::traceFullSub0(void* userp, VerilatedFst* tracep) {
         tracep->fullBit(oldp+868,(((0x37U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__w_en_i))));
-        tracep->fullBit(oldp+869,(((7U == (0xfU & ((IData)(vlTOPp->addr_i) 
-                                                   >> 2U))) 
+        tracep->fullBit(oldp+869,(((7U == (7U & ((IData)(vlTOPp->addr_i) 
+                                                 >> 3U))) 
                                    & (IData)(vlTOPp->top__DOT____Vcellinp__i1__rbuf_w_vi))));
         tracep->fullBit(oldp+870,(((0x38U == (0x3fU 
                                               & (IData)(vlTOPp->addr_i))) 

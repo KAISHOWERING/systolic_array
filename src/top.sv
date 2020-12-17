@@ -27,7 +27,7 @@ pe_array i1(
     .rbuf_waddr_i(addr_i[5:0]),
     .rbuf_wdata_i(data_i),
     .rbuf_w_vi(addr_i[7:6] == 2'b01 && wr_vi),//地址64~127存data
-    .start_vi(addr_i[7:6] == 2'b11 && wr_vi),//地址128~191存output
+    .start_vi(addr_i[7:6] == 2'b11 && wr_vi),// 地址128~191存output
     .mac_o(mac),
     .mac_v_o(mac_v)
 );
@@ -41,7 +41,7 @@ for(genvar i = 0; i < array_width; i++) begin: o_buf_gen
         .wdata_i(mac[i]),
         .wdata_vi(mac_v[i]),
         .raddr_i(addr_i[2:0]),
-        .rdata_o(rdata[i])
+        .rdata_o(rdata[i]) 
     );
 end
 

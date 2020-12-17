@@ -33,6 +33,11 @@ for(genvar i = 0; i < array_height; ++i) begin: pe_column
     wire cc_to_pe;
     wire [x_w-1:0] rdata;
 
+    wire [array_width:0][x_w-1:0] pe_x;
+    //valid
+    wire [array_width:0] pe_x_v;
+    //tie vertical signal with horisonal signal
+    
     read_buf #(
         .x_w(x_w)
         ,.depth(rbuf_depth)
@@ -41,20 +46,17 @@ for(genvar i = 0; i < array_height; ++i) begin: pe_column
         .rst_i(rst_i),
 
         .start_vi(start_v[i]),
-        .d_o(pe_x[i]),
-        .v_vo(pe_x_v[i]),
+        .d_o(pe_x[0]),//修改
+        .v_vo(pe_x_v[0]),//修改
 
         .addr_w_i(rbuf_waddr_i[$clog2(rbuf_depth)-1:0]),
         .data_w_i(rbuf_wdata_i),
-        .w_vi(rbuf_waddr_i[$clog2(array_height) + $clog2(rbuf_depth)-1:$clog2(rbuf_depth)-1] == i && rbuf_w_vi)
-
+        .w_vi(rbuf_waddr_i[$clog2(array_height) + $clog2(rbuf_depth)-1:$clog2(rbuf_depth)] == i && rbuf_w_vi)
+        //修改
     );
     //data
-    wire [array_width:0][x_w-1:0] pe_x;
-    //valid
-    wire [array_width:0] pe_x_v;
-    //tie vertical signal with horisonal signal
-    assign start_v[i + 1] = pe_x_v[i];
+
+    assign start_v[i + 1] = pe_x_v[0];//修改
 
 
     for(genvar j = 0; j < array_width; ++j) begin: pe_row

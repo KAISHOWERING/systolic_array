@@ -17,13 +17,13 @@ module read_buf#(
 
 logic [$clog2(depth):0] cnt_n;
 reg [$clog2(depth):0] cnt_r;
-
+//start_vi控制输出
 always_comb begin
     if(cnt_r != depth) begin
-        cnt_n = cnt_r + 1;
+        cnt_n = cnt_r + 1;//计数优先，此状态由start_vi开启。cnt_n比cnt_r多1
     end
     else if(start_vi) begin
-        cnt_n = 0;
+        cnt_n = 0;//从头开始计数，目的是为了作为输出的index
     end
     else cnt_n = cnt_r; 
 end
@@ -47,7 +47,7 @@ always_ff @(posedge clk_i or negedge rst_i)
     else v_vo <= cnt_n != depth;
 
 
-always_ff @(posedge clk_i)
+always_ff @(posedge clk_i)//先看写入，w_vi高电平有效
     if(w_vi) data_r[addr_w_i] <= data_w_i;
 
 endmodule
