@@ -9,7 +9,10 @@ module o_buf #(
   input wdata_vi,
 
   input [$clog2(depth)-1:0] raddr_i,
-  output reg [width-1:0] rdata_o
+  output reg [width-1:0] rdata_o,
+
+  input [width-1:0] cdata_i, //bias
+  input cw_vi //bias en 
 );
 
 reg [$clog2(depth)-1:0] cnt_r;
@@ -22,12 +25,15 @@ end
 reg [depth-1:0][width-1:0] data_r;
 
 always_ff @(posedge clk_i or negedge rst_i) begin
-  if(wdata_vi) data_r[cnt_r] <= wdata_i;
+  assert (wdata_vi && cw_vi != 1) else $error("It's gone wrong");
+  if(wdata_vi) data_r[cnt_r] <= wdata_i + data_r[cnt_r];
+  else if(cw_vi) data_r[raddr_i] <= cdata_i;
 end
 
 always_ff @(posedge clk_i or negedge rst_i) begin
   if(!rst_i) rdata_o <= '0;
   else rdata_o <= data_r[raddr_i];
 end
+
 
 endmodule

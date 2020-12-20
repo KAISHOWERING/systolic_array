@@ -21,19 +21,20 @@ public:
     }
 
     void reset(){//1p
-    time_stamp += 1;
-    top->rst_i = 0; // reset
-    top->eval();
+        time_stamp += 1;
+        top->rst_i = 0; // reset
+        top->eval();
 
-    time_stamp += 1;
-    top->rst_i = 1; //
-    top->eval();
+        time_stamp += 1;
+        top->rst_i = 1; //
+        top->eval();
     }
 
     void tick(){//1p
         time_stamp += 1;
         top->clk_i = 1;
         top->eval();
+
         time_stamp += 1;
         top->clk_i = 0;
         top->eval();
@@ -58,10 +59,27 @@ public:
         top->wr_vi = 0;
     }
 
+    void setBias(int data[8][8]){
+        for(int i = 0; i < 8; ++i){
+            for(int j = 0; j < 8; ++j){
+                writeValue(i * 8 + j +128, data[i][j]);
+            }
+
+        }
+    }
+
+    void fetchResult(int result[8][8]){
+        for(int i = 0; i < 8; ++i){
+            for(int j = 0; j < 8; ++j){
+               result[i][j] = readValue(i*8 + j + 128);
+            }
+        }       
+
+    }
+
     void matrixMultiply(//64p+64p+1p+200p+64p=393p
         char input[8][8],
-        char weight[8][8],
-        int result[8][8]
+        char weight[8][8]
     ){
         // load weight
         for(int i = 0; i < 8; ++i){
@@ -80,13 +98,10 @@ public:
         top->wr_vi = 1;
         tick();
         top->wr_vi = 0;
-        for(int i =0; i < 200; ++i) tick();
+        while (readValue(255) != 1) tick();
+        // for(int i =0; i < 200; ++i) tick();
         // fetch output
-        for(int i = 0; i < 8; ++i){
-            for(int j = 0; j < 8; ++j){
-                result[i][j] = readValue(i*8 + j + 128);
-            }
-        }
+
     }
 
 private:
@@ -107,14 +122,16 @@ int main(int argc, char* argv[]) {
     int  result[8][8];
     for(int i = 0; i < 8; ++i){
         for(int j = 0; j < 8; ++j){
-            weight[i][j] = 1 ;
+            weight[i][j] = i+j ;
             input[i][j] = 1 ;
             result[i][j] = 0;
         }
     }
-
-    w.matrixMultiply(input, weight, result);//393p
-
+    w.setBias(result);
+    w.matrixMultiply(input, weight);//393p
+    // w.matrixMultiply(input, weight);
+    // w.matrixMultiply(input, weight);
+    w.fetchResult(result);
     printf("Rsult:\n");
     for(int i = 0; i < 8; ++i){
         for(int j = 0; j < 8; ++j){
@@ -122,7 +139,6 @@ int main(int argc, char* argv[]) {
         }
         printf("\n");
     }
-
     top->final();
     delete top;
     return 0;
