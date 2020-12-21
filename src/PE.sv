@@ -7,10 +7,10 @@ module PE #(
     input clk_i,
     input rst_i,
     
-    input [x_w-1:0] x_i,//x stream from left to right
+    input signed [x_w-1:0] x_i,//x stream from left to right
     input x_v_i,//x valid signal    
 
-    input [mac_w-1:0] mac_i,//8+8+3,mac stream from up to down 
+    input signed [mac_w-1:0] mac_i,//8+8+3,mac stream from up to down 
     input mac_v_i,//mac valid signal 
 
     input [w_w-1:0] w_i,//weight data provided by ram 
@@ -19,11 +19,11 @@ module PE #(
     output reg [x_w-1:0] x_o,
     output reg x_v_o,
     
-    output reg [mac_w-1:0] mac_o,
+    output reg signed [mac_w-1:0] mac_o,
     output reg mac_v_o
 );
 //  identify weight
-reg [w_w-1:0] w_r;
+reg signed [w_w-1:0] w_r;
 always_ff @(posedge clk_i or negedge rst_i)begin
     if (!rst_i)begin
         w_r <= 0;
