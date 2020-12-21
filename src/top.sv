@@ -57,7 +57,7 @@ for(genvar i = 0; i < array_width; i++) begin: o_buf_gen
 end
 
 reg [1:0] addr_76_r;
-always_ff @(posedge clk_i or negedge rst_i)begin
+always_ff @(posedge clk_i)begin
     addr_76_r <= addr_i[7:6];
 end
 

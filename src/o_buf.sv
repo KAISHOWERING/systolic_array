@@ -26,8 +26,11 @@ reg [depth-1:0][width-1+1:0] data_r;//分块拓展
 
 always_ff @(posedge clk_i or negedge rst_i) begin
   assert (wdata_vi && cw_vi != 1) else $error("It's gone wrong");
-  if(wdata_vi) data_r[cnt_r] <= wdata_i + data_r[cnt_r];
-  else if(cw_vi) data_r[raddr_i] <= {1'b0,cdata_i};//分块拓展
+  if(!rst_i) data_r <= '0;
+  else begin
+    if(wdata_vi) data_r[cnt_r] <= wdata_i + data_r[cnt_r];
+    else if(cw_vi) data_r[raddr_i] <= {1'b0,cdata_i};//分块拓展
+    end
 end
 
 always_ff @(posedge clk_i or negedge rst_i) begin
