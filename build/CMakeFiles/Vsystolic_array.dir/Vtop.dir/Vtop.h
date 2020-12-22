@@ -537,7 +537,7 @@ VL_MODULE(Vtop) {
     static QData _change_request_1(Vtop__Syms* __restrict vlSymsp);
   public:
     static void _combo__TOP__2(Vtop__Syms* __restrict vlSymsp);
-    static void _combo__TOP__7(Vtop__Syms* __restrict vlSymsp);
+    static void _combo__TOP__8(Vtop__Syms* __restrict vlSymsp);
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
   public:
@@ -553,6 +553,7 @@ VL_MODULE(Vtop) {
     static void _sequent__TOP__4(Vtop__Syms* __restrict vlSymsp);
     static void _sequent__TOP__5(Vtop__Syms* __restrict vlSymsp);
     static void _sequent__TOP__6(Vtop__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__7(Vtop__Syms* __restrict vlSymsp);
     static void _settle__TOP__3(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
   private:
     static void traceChgSub0(void* userp, VerilatedFst* tracep);

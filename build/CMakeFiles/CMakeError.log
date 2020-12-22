@@ -62,3 +62,67 @@ make: *** [Makefile:121: cmTC_0eb47/fast] Error 2
 Source file was:
 int main() {return 0;}
 
+Performing C++ SOURCE FILE Test _fbracket_depth_4096 failed with the following output:
+Change Dir: /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e172f/fast && /usr/bin/make -f CMakeFiles/cmTC_e172f.dir/build.make CMakeFiles/cmTC_e172f.dir/build
+make[1]: Entering directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e172f.dir/src.cxx.o
+/bin/g++-9    -D_fbracket_depth_4096   -fbracket-depth=4096 -o CMakeFiles/cmTC_e172f.dir/src.cxx.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp/src.cxx
+g++-9: error: unrecognized command line option '-fbracket-depth=4096'
+make[1]: *** [CMakeFiles/cmTC_e172f.dir/build.make:66: CMakeFiles/cmTC_e172f.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e172f/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test _mno_cet failed with the following output:
+Change Dir: /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e1d43/fast && /usr/bin/make -f CMakeFiles/cmTC_e1d43.dir/build.make CMakeFiles/cmTC_e1d43.dir/build
+make[1]: Entering directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e1d43.dir/src.cxx.o
+/bin/g++-9    -D_mno_cet   -mno-cet -o CMakeFiles/cmTC_e1d43.dir/src.cxx.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp/src.cxx
+g++-9: error: unrecognized command line option '-mno-cet'; did you mean '-mno-aes'?
+make[1]: *** [CMakeFiles/cmTC_e1d43.dir/build.make:66: CMakeFiles/cmTC_e1d43.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e1d43/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test _Qunused_arguments failed with the following output:
+Change Dir: /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7d8b6/fast && /usr/bin/make -f CMakeFiles/cmTC_7d8b6.dir/build.make CMakeFiles/cmTC_7d8b6.dir/build
+make[1]: Entering directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7d8b6.dir/src.cxx.o
+/bin/g++-9    -D_Qunused_arguments   -Qunused-arguments -o CMakeFiles/cmTC_7d8b6.dir/src.cxx.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp/src.cxx
+g++-9: error: unrecognized command line option '-Qunused-arguments'
+make[1]: *** [CMakeFiles/cmTC_7d8b6.dir/build.make:66: CMakeFiles/cmTC_7d8b6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7d8b6/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test _mt failed with the following output:
+Change Dir: /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_65f52/fast && /usr/bin/make -f CMakeFiles/cmTC_65f52.dir/build.make CMakeFiles/cmTC_65f52.dir/build
+make[1]: Entering directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_65f52.dir/src.cxx.o
+/bin/g++-9    -D_mt   -o CMakeFiles/cmTC_65f52.dir/src.cxx.o -c /mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_65f52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65f52.dir/link.txt --verbose=1
+/bin/g++-9   -D_mt    CMakeFiles/cmTC_65f52.dir/src.cxx.o  -o cmTC_65f52  -mt 
+g++-9: error: unrecognized command line option ‘-mt’; did you mean ‘-t’?
+make[1]: *** [CMakeFiles/cmTC_65f52.dir/build.make:87: cmTC_65f52] Error 1
+make[1]: Leaving directory '/mnt/c/Users/78578/Desktop/systolic_lab/systolic_array/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_65f52/fast] Error 2
+
+
+Source file was:
+int main() {return 0;}
+
