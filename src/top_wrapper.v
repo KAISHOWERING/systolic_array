@@ -7,7 +7,7 @@ module top_wrapper (
 
     input [3:0] wr_vi,
 
-    output [19-1+1:0] data_o
+    output [31:0] data_o
 );
 top i0(
     .clk_i(clk_i),

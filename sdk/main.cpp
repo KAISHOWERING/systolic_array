@@ -45,43 +45,17 @@
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
 
-#include <stdio.h>
-#include "platform.h"
-#include "xil_printf.h"
-#include "xil_io.h"
+#include <iostream>
+#include "matmul_lenet5.h"
 
 
 int main()
 {
     init_platform();
 
-    print("Multiply begin\n\r");
-
-    int i,j;
-    for(i = 0; i < 8; ++i){ // bias
-        for(j = 0; j < 8; ++j){
-            Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + (128 + i * 8 + j)*4, 0x00);
-        }
-    }
-    for(i = 0; i < 8; ++i){ // weight
-        for(j = 0; j < 8; ++j){
-            Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + (i * 8 + j)*4, i+j);
-        }
-    }
-    for(i = 0; i < 8; ++i){ // input
-        for(j = 0; j < 8; ++j){
-            Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + (64 + i * 8 + j)*4, i*j);
-        }
-    }
-
-    Xil_Out8(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 255*4, 0x00);
-    while (Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 255*4) != 0x01);
-
-    for(i = 0; i < 8; ++i){ // result
-        for(j = 0; j < 8; ++j){
-            printf("%d%d-%d ",i,j,Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + (128 + i * 8 + j)*4));
-        }
-        printf("\n");
+    setbuf(stdin, NULL);
+    while(1) {
+        Lenet5();
     }
 
     cleanup_platform();

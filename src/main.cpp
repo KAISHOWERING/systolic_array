@@ -122,11 +122,14 @@ int main(int argc, char* argv[]) {
     int  result[8][8];
     for(int i = 0; i < 8; ++i){
         for(int j = 0; j < 8; ++j){
-            weight[i][j] = i+j ;
-            input[i][j] = i*j ;
+            weight[j][i] = (i==7)?0:i+j;
+            input[i][j] = (j==7)?0:i*j;           
             result[i][j] = 0;
         }
     }
+
+
+    
     w.setBias(result);
     w.matrixMultiply(input, weight);//393p
     // w.matrixMultiply(input, weight);

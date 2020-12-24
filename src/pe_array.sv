@@ -1,9 +1,9 @@
 module pe_array #(
     parameter array_width = 8,
     parameter array_height = 8,
-    parameter x_w = 8,
-    parameter w_w = 8,
-    parameter mac_w = 19,
+    parameter x_w = 9,
+    parameter w_w = 9,
+    parameter mac_w = 32,
     parameter rbuf_depth = 8
 )
 (

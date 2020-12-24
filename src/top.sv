@@ -1,6 +1,6 @@
 module top #(
-    parameter mac_w = 19,
-    parameter x_w = 8,
+    parameter mac_w = 32,
+    parameter x_w = 9,
     parameter array_width = 8,
     parameter array_height = 8
 )(
@@ -12,7 +12,7 @@ module top #(
 
     input wr_vi,
 
-    output [mac_w-1+1:0] data_o//分块拓展
+    output [mac_w-1:0] data_o//分块拓展
 );
 
 wire [array_width-1:0][mac_w-1:0] mac;
@@ -41,7 +41,7 @@ pe_array i1(
     .mac_v_o(mac_v)
 );
 
-wire [7:0][mac_w-1+1:0] rdata;//分块拓展
+wire [7:0][mac_w-1:0] rdata;//分块拓展
 
 for(genvar i = 0; i < array_width; i++) begin: o_buf_gen
     o_buf obuf(
@@ -61,7 +61,7 @@ always_ff @(posedge clk_i)begin
     addr_76_r <= addr_i[7:6];
 end
 
-assign data_o = addr_76_r == 2'b10 ? rdata[addr_i[5:3]] : {19'b0, cnt_24_r == 24};//分块拓展
+assign data_o = addr_76_r == 2'b10 ? rdata[addr_i[5:3]] : {31'b0, cnt_24_r == 24};//分块拓展
 
 initial begin
     $dumpfile("top.fst");

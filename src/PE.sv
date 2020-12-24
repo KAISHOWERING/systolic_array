@@ -1,7 +1,7 @@
 module PE #(
-    parameter x_w = 8,
-    parameter w_w = 8,
-    parameter mac_w = 19//8*8 array
+    parameter x_w = 9,
+    parameter w_w = 9,
+    parameter mac_w = 32//8*8 array
 )
 (
     input clk_i,
@@ -13,7 +13,7 @@ module PE #(
     input signed [mac_w-1:0] mac_i,//8+8+3,mac stream from up to down 
     input mac_v_i,//mac valid signal 
 
-    input [w_w-1:0] w_i,//weight data provided by ram 
+    input signed [w_w-1:0] w_i,//weight data provided by ram 
     input wr_en_i,
 
     output reg [x_w-1:0] x_o,

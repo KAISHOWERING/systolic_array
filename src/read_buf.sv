@@ -1,5 +1,5 @@
 module read_buf#(
-    parameter x_w = 8,
+    parameter x_w = 9,
     parameter depth = 8
 )(
     input clk_i,
