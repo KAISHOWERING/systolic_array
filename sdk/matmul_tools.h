@@ -1,49 +1,13 @@
 /******************************************************************************
-*
-* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* Use of the Software is limited solely to applications:
-* (a) running on a Xilinx device, or
-* (b) that interact with a Xilinx device through a bus or interconnect.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
-* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-* SOFTWARE.
-*
-* Except as contained in this notice, the name of the Xilinx shall not be used
-* in advertising or otherwise to promote the sale, use or other dealings in
-* this Software without prior written authorization from Xilinx.
-*
+*******************************************************************************
+**                                                                           **
+**  File        : matmul_tools.h                                             **
+**  Contributor : SQ Lin, YK Lin, BJ Hou                                     **
+**  Date        : 2020-12-24                                                 **
+**  Description : Class used in nerual network.                              **
+**                                                                           **
+*******************************************************************************
 ******************************************************************************/
-
-/*
- * helloworld.c: simple test application
- *
- * This application configures UART 16550 to baud rate 9600.
- * PS7 UART (Zynq) is not initialized by this application, since
- * bootrom/bsp configures it to baud rate 115200
- *
- * ------------------------------------------------
- * | UART TYPE   BAUD RATE                        |
- * ------------------------------------------------
- *   uartns550   9600
- *   uartlite    Configurable only in HW design
- *   ps7_uart    115200 (configured by bootrom/bsp)
- */
 
 #ifndef __SYSTOLIC_TOOLS_MATMUL_H_
 #define __SYSTOLIC_TOOLS_MATMUL_H_
@@ -52,13 +16,15 @@
 #define MATMUL_SIZE_BASE    8
 
 
-class MatInt {
+class MatInt
+{
     int *MatBuf;
     int MatRowSize; // row number of matrix
     int MatColSize; // col number of matrix
 
     void MatMulSetBias(MatInt *input, MatInt *weight, MatInt *bias, MatInt *result);
     void MatMulNotSetBias(MatInt *input, MatInt *weight, MatInt *result);
+    void MatMulPartitionedWithInput(MatInt *input, MatInt *result);
 
 public:
 	MatInt(int row, int col) { MatRowSize = row; MatColSize = col; MatBuf = new int[MatRowSize * MatColSize];  
@@ -68,11 +34,9 @@ public:
     int Col() const { return MatColSize; }
 	int& operator()(int row, int col) { return MatBuf[row * MatColSize + col]; }
 
-    void MatMulPartitionedWithInput(MatInt *input, MatInt *result);
     void MatMulConvolutionWithKernel(int kernelNum, MatInt *kernel, MatInt *result);
     void MatMulMaxpoolingWithBiasAndQuantitizer(const signed char bias, unsigned char fi, unsigned char fp, unsigned char fo, MatInt *result);
     void MatMulFullyConnectedWithKernelAndBiasAndQuantitizer(MatInt *kernel, const signed char *bias, unsigned char fi, unsigned char fp, unsigned char fo, MatInt *result);
-
 };
 
 void MatInt::MatMulPartitionedWithInput(MatInt *input, MatInt *result)
@@ -274,6 +238,7 @@ void init_platform() {;}
 void cleanup_platform() {;}
 
 static MatInt globalresult{MATMUL_SIZE_BASE, MATMUL_SIZE_BASE}; //
+// input should be a u8 and weight should be a s8 to fit the board design
 
 void MatInt::MatMulSetBias(MatInt *input, MatInt *weight, MatInt *bias, MatInt *result)
 {
