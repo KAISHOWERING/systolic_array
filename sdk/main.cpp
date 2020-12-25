@@ -8,7 +8,7 @@
 **                using a LeNet-5 like neural network.                            **
 **                Running with/without PYNQ is both supported. To run without     **
 **                PYNQ, change MATMUL_USE_PYNQ in "matmul_tools.h" to 0.          **
-**                This file refers to the helloworld.c template desribed below.   **             
+**                This file refers to the helloworld.c template described below.  **             
 **                                                                                **
 ************************************************************************************
 ***********************************************************************************/
